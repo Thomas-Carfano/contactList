@@ -1,11 +1,10 @@
 import './App.css'
+import ContactList from './components/contactList';
 
-function App() {
- 
-
+export default function App() {
   return (
-    console.log("hello")
+    <>
+      <ContactList />
+    </>
   )
 }
-
-export default App
