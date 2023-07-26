@@ -1,8 +1,22 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import ContactRow from './ContactRow'
 
 const ContactList = () => {
 const [contacts, setContacts] = useState(dummyContacts)
+
+useEffect(() => {
+const fetchContacts = async () => {
+  try{
+  const getContacts = await fetch(`https://jsonplaceholder.typicode.com/users`);
+  const response = await getContacts.json();
+  setContacts(response)
+} catch (error) {
+  console.log(error)
+}}
+
+fetchContacts();
+}, [])
+
   return ( 
         <table>
           <thead>

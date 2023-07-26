@@ -1,10 +1,11 @@
 
-const ContactRow = ({ contact }) => {
-    return (
+
+const ContactRow = ({contact}) => {
+  return (
         <tr>
+          <td>{contact.id}</td>
           <td>{contact.name}</td>
-          <td>{contact.email}</td>
-          <td>{contact.phone}</td>
+          <td>{contact.username}</td>
         </tr>
       );
 }
