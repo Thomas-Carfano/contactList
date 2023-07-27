@@ -23,12 +23,12 @@ const ContactRow = ({contact}) => {
           <td>Name</td>
           <td>Email</td>
           <td>Phone</td>
-          <td>Get Info</td>
         </tr>
         <tr>
-        <td>${contact.id}</td>
         <td>${contact.name}</td>
-        <td>${contact.username}</td>
+        <td>${contact.email}</td>
+        <td>${contact.phone}</td>
+        <td>${contact.website}</td>
         <button onClick="window.location.reload()">Go Back</button>
       </tr>
   <table>
@@ -38,9 +38,9 @@ const ContactRow = ({contact}) => {
 
   return (
         <tr>
-          <td>{contact.id}</td>
           <td>{contact.name}</td>
-          <td>{contact.username}</td>
+          <td>{contact.email}</td>
+          <td>{contact.phone}</td>
           <button onClick={clearTable}>Deets</button>
         </tr>
       );

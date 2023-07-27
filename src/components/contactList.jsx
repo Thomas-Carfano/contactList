@@ -7,7 +7,7 @@ const [contacts, setContacts] = useState([])
 useEffect(() => {
 const fetchContacts = async () => {
   try{
-  const getContacts = await fetch(`https://jsonplaceholder.typicode.com/users`);
+  const getContacts = await fetch(`https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users`);
   const response = await getContacts.json();
   setContacts(response)
 } catch (error) {
